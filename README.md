@@ -1,2 +1,4 @@
-# drupal-production-checklist
-A simple checklist for Drupal project production launch
+# Drupal production checklist
+A simple checklist for Drupal project production launch.
+
+
