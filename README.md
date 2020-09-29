@@ -13,7 +13,7 @@ The steps bellow are not mandatory and their order is not strict.
 - [ ] Drupal: Remove old Super Admin users
 - [ ] Drupal: Remove demo Nodes and content
 - [ ] Merge git branch stage to master (Pull Request)
-- [ ] Git pull && composer install - [ ] - [ ] no- [ ] dev && drush cim - [ ] y && drush updb
+- [ ] `git pull && composer install --no-dev && drush cim -y && drush updb`
 - [ ] Drupal: Content freeze (usually on stage website)
 - [ ] Server: Copy public files from 7.x
 - [ ] Server: Copy db from Stage to Prod (except if there is no new content on stage)
@@ -58,7 +58,8 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] private files
 - [ ] Server: Add cron jobs
 - [ ] Server: Change DNS
-- [ ] Drupal: Run cron several times to index on Search
+- [ ] Drupal: Run cron several times to index on Search or sitemap
+- [ ] Other: Update sitemap.xml and inform the Search Engines about it
 - [ ] Drupal: Rebuild content permissions
 - [ ] Drupal: Update project translations `/admin/reports/translations/check`
 - [ ] Drupal: Download a complete whole archive of the new website (code, database, public files)
