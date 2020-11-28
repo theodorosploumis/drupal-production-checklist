@@ -6,7 +6,7 @@ The steps bellow are not mandatory and their order is not strict.
 
 ## Checklist
 
-### Setup
+### 1. Setup
 - [ ] Other: Define the datetime for the launch to happen.
 - [ ] Merge git branch stage to master (Pull Request)
 - [ ] `git pull && composer install --no-dev && drush cim -y && drush updb`
@@ -19,7 +19,7 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] simplei (drupal module settings)
   - [ ] private files
 
-### Migrations
+### 2. Migrations
 - [ ] Server: Copy public files from 7.x
 - [ ] Server: Copy db from Stage to Prod (except if there is no new content on stage)
 - [ ] Drupal: Execute final migrations (from the frozen production 7.x db)
@@ -32,13 +32,13 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] migrate_ui
   - [ ] migrate
 
-### Clean up
+### 3. Clean up
 - [ ] Drupal: Remove old Super Admin users
 - [ ] Drupal: Remove demo Nodes and content
 
-### Production prepare
+### 4. Production prepare
 - [ ] Server: Add cron jobs
-- [ ] Drupal: Disable display errors on screen
+- [ ] Drupal: Disable displaying errors on screen
 - [ ] Drupal: Disable modules used on development except if they are needed.
   - [ ] devel
   - [ ] kint
@@ -63,21 +63,21 @@ The steps bellow are not mandatory and their order is not strict.
 - [ ] Drupal: Enable dblog and check for mass php errors, 404 errors etc
 - [ ] Drupal: Download a complete whole archive of the new website (code, database, public files)
 
-### GDPR
+### 5. GDPR
 - [ ] GDPR: Remove IP tracking on Webforms
 - [ ] GDPR: Remove IP tracking on dblog
 - [ ] GDPR: Add cookies banner
 
-### Updates
+### 6. Updates
 - [ ] Drupal: Run cron several times to index on Search or sitemap
 - [ ] Drupal: Update sitemap.xml and inform the Search Engines about it
 - [ ] Drupal: Rebuild content permissions
 
-### Production
+### 7. Production
 - [ ] Server: Change DNS
 - [ ] Drupal: Test all forms to send emails (if set to)
 
-### After launch
+### 8. After launch
 - [ ] Server: Move old 7.x site to a protected new subdomain
 - [ ] Other: Update LastPass passwords and links
 - [ ] Other: Update project Documentation and internal company Documentation
