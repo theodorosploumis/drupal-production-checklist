@@ -6,20 +6,23 @@ The steps bellow are not mandatory and their order is not strict.
 
 ## Checklist
 
+### Setup
 - [ ] Other: Define the datetime for the launch to happen.
-- [ ] GDPR: Remove IP tracking on Webforms
-- [ ] GDPR: Remove IP tracking on dblog
-- [ ] GDPR: Add cookies banner
-- [ ] Drupal: Remove old Super Admin users
-- [ ] Drupal: Remove demo Nodes and content
 - [ ] Merge git branch stage to master (Pull Request)
 - [ ] `git pull && composer install --no-dev && drush cim -y && drush updb`
 - [ ] Drupal: Content freeze (usually on stage website)
+- [ ] Server: Fix permissions for translations folder and update translations
+- [ ] Drupal: Update project translations `/admin/reports/translations/check`
+- [ ] Drupal: Set private folder (if need to)
+- [ ] Drupal: Fix settings.php warnings
+  - [ ] trusted host patterns
+  - [ ] simplei (drupal module settings)
+  - [ ] private files
+
+### Migrations
 - [ ] Server: Copy public files from 7.x
 - [ ] Server: Copy db from Stage to Prod (except if there is no new content on stage)
 - [ ] Drupal: Execute final migrations (from the frozen production 7.x db)
-- [ ] Server: Fix permissions for translations folder and update translations
-- [ ] Drupal: Test all forms to send emails (if set to)
 - [ ] Drupal: Disable all migration related modules.
   - [ ] custom_migrate_\* (current site custom migrations)
   - [ ] migrate_plus
@@ -28,6 +31,13 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] migrate_drupal
   - [ ] migrate_ui
   - [ ] migrate
+
+### Clean up
+- [ ] Drupal: Remove old Super Admin users
+- [ ] Drupal: Remove demo Nodes and content
+
+### Production prepare
+- [ ] Server: Add cron jobs
 - [ ] Drupal: Disable display errors on screen
 - [ ] Drupal: Disable modules used on development except if they are needed.
   - [ ] devel
@@ -51,21 +61,26 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] minifyhtml
   - [ ] critical_css
 - [ ] Drupal: Enable dblog and check for mass php errors, 404 errors etc
-- [ ] Drupal: Set private folder (if need to)
-- [ ] Drupal: Fix settings.php warnings
-  - [ ] trusted host patterns
-  - [ ] simplei (drupal module settings)
-  - [ ] private files
-- [ ] Server: Add cron jobs
-- [ ] Server: Change DNS
-- [ ] Drupal: Run cron several times to index on Search or sitemap
-- [ ] Other: Update sitemap.xml and inform the Search Engines about it
-- [ ] Drupal: Rebuild content permissions
-- [ ] Drupal: Update project translations `/admin/reports/translations/check`
 - [ ] Drupal: Download a complete whole archive of the new website (code, database, public files)
+
+### GDPR
+- [ ] GDPR: Remove IP tracking on Webforms
+- [ ] GDPR: Remove IP tracking on dblog
+- [ ] GDPR: Add cookies banner
+
+### Updates
+- [ ] Drupal: Run cron several times to index on Search or sitemap
+- [ ] Drupal: Update sitemap.xml and inform the Search Engines about it
+- [ ] Drupal: Rebuild content permissions
+
+### Production
+- [ ] Server: Change DNS
+- [ ] Drupal: Test all forms to send emails (if set to)
+
+### After launch
 - [ ] Server: Move old 7.x site to a protected new subdomain
 - [ ] Other: Update LastPass passwords and links
-- [ ] Other: Update site Docs and internal company Docs
+- [ ] Other: Update project Documentation and internal company Documentation
 - [ ] Other: Generate internal report for company. Examples.
   - [ ] Google page speed results (compared to the old website)
   - [ ] new/interesting drupal modules used
@@ -73,10 +88,9 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] patches applied
   - [ ] tasks time estimations that were wrong
   - [ ] findings about Drupal or other used services
-- [ ] Other: Write possible Blog posts about the project
+- [ ] Other: Write helpful Blog posts about the project
 
 
 ## Resources
 
 - https://www.drupal.org/project/production_checklist
-
