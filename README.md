@@ -14,6 +14,7 @@ The steps bellow are not mandatory and their order is not strict.
 - [ ] Server: Fix permissions for translations folder and update translations
 - [ ] Drupal: Update project translations `/admin/reports/translations/check`
 - [ ] Drupal: Set private folder (if need to)
+- [ ] Drupal: Force unique subdomain redirect (force www or non-www)
 - [ ] Drupal: Fix settings.php warnings
   - [ ] trusted host patterns
   - [ ] simplei (drupal module settings)
