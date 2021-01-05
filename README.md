@@ -77,10 +77,13 @@ The steps bellow are not mandatory and their order is not strict.
 ### 7. Production
 - [ ] Server: Change DNS
 - [ ] Drupal: Test all forms to send emails (if set to)
+- [ ] Other: Update LastPass passwords and links
+- [ ] Server: Move old 7.x site to a protected new subdomain
 
 ### 8. After launch
-- [ ] Server: Move old 7.x site to a protected new subdomain
-- [ ] Other: Update LastPass passwords and links
+- [ ] Other: Give all the required passwords to the customer
+- [ ] Other: Give all the required files and manuals to the customer, provide education
+- [ ] Other: Sing a Support contract with the customer
 - [ ] Other: Update project Documentation and internal company Documentation
 - [ ] Other: Generate internal report for company. Examples.
   - [ ] Google page speed results (compared to the old website)
@@ -89,7 +92,11 @@ The steps bellow are not mandatory and their order is not strict.
   - [ ] patches applied
   - [ ] tasks time estimations that were wrong
   - [ ] findings about Drupal or other used services
-- [ ] Other: Write helpful Blog posts about the project
+  
+### 9. Sales/Promotion
+- [ ] Promotion: Write helpful Blog post(s) about the project
+- [ ] Promotion: Ask for a customer testimonial
+- [ ] Promotion: Add project to the website portfolio
 
 
 ## Resources
